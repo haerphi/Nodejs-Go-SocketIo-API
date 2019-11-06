@@ -25,7 +25,6 @@ server.listen(port, () => console.log(`🚀 Listening on port ${port}`));
 //SocketIO event
 io.on("connection", socket => {
   console.log(`New client connected ${socket.id}`);
-  socket.emit("newMessage", `Welcome :D`);
 
   //disconnect
   socket.on("disconnect", () => {
